@@ -1,0 +1,248 @@
+/* ====================== */
+/* Variables */
+/* ====================== */
+
+:root {
+    --main-accent: coral;
+    --light-accent: #ddd;
+    --dark-accent: #333;
+    --main-grey: #777;
+}
+
+/* ====================== */
+/* CSS Resets */
+/* ====================== */
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+}
+
+/* ======================== */
+/* Global Styles */
+/* ======================== */
+
+body {
+    background: var(--dark-accent);
+    color: #eee;
+}
+
+a {
+    text-decoration: none;
+}
+    a:hover {
+        cursor: pointer;
+    }
+
+.container {
+    width: 80%;
+    margin: 0 auto;
+}
+
+.hidden {
+    display: none;
+}
+
+.header {
+    font-size: 1.5rem;
+    margin-bottom: .5em;
+    color: var(--light-accent);
+}
+
+.full-screen-opaque {
+    position: absolute;
+    top: 0; bottom: 0; left: 0; right: 0;
+    background: rgba(0, 0, 0, .6);
+    z-index: 5;
+}
+
+/* ======================= */
+/* Navbar styles */
+/* ======================= */
+
+#nav {
+    height: 4rem;
+    background: var(--main-accent);
+    margin-bottom: 1.5em;
+}
+    #navContainer {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        height: 100%;
+    }
+
+    .nav-header {
+        color: var(--dark-accent);
+        font-size: 1.5rem;
+        transition: all .4s;
+    }
+        .nav-header:hover {
+            letter-spacing: 3px;
+            transform: scale(1.15);
+        }
+
+    #addBtn {
+        font-size: 2rem;
+        font-weight: bold;
+        color: var(--dark-accent);
+        transition: transform .4s;
+    }
+        #addBtn:hover {
+            transform: scale(1.5);
+        }
+
+@media only screen and (max-width: 786px) {
+    #nav {
+        height: 5rem;
+    }
+
+    #navContainer {
+        flex-direction: column;
+        justify-content: center;
+    }
+}
+
+/* ======================= */
+/* Panel styles */
+/* ======================= */
+
+.panel {
+    background: #555;
+    border-radius: .5em;
+    box-shadow: 0 0 3px var(--light-accent);
+    padding: 2.5em 1.5em 1.5em;
+    margin: 1em;
+}
+
+/* ======================== */
+/* Form style */
+/* ======================== */
+
+.form-control {
+    width: 100%;
+    margin: .5em 0;
+    height: 2em;
+    border-radius: .25em;
+    border: 1px solid var(--main-grey);
+    padding: .25em 1em;
+    font-size: 1.25rem;
+    color: var(--main-grey);
+    background: var(--light-accent);
+}
+
+#addLinkContainer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#addLinkContainer.hidden {
+    display: none;
+}
+
+#addLinkPanel {
+    border: 1px solid var(--light-accent);
+    box-shadow: 0 0 10px var(--light-accent);    
+    animation: slideDown .7s ease-in;
+}
+
+/* ========================== */
+/* Buttons */
+/* ========================== */
+
+input[type='submit'], button {
+    padding: .5em 1.5em;
+    border-radius: .25em;
+    border: 1px solid var(--main-accent);
+    background: var(--main-accent);
+    color: var(--dark-accent);
+    font-size: 1rem;
+    transition: all .4s;
+}
+    input[type='submit']:hover, button:hover {
+        cursor: pointer;
+        background: var(--light-accent);
+    }
+
+.btn-sm {
+    font-size: .9rem;
+    padding: .25em .5em;
+}
+
+/* ======================= */
+/* Links style */
+/* ======================= */
+
+#linksList {
+    display: flex;
+    flex-wrap: wrap;
+}
+    .flex-item {
+        flex-basis: 100%;
+    }
+
+.link {
+    position: relative;
+    width: 100%;
+    transition: all .4s;
+}
+    .link:hover {
+        box-shadow: 0 0 10px var(--main-accent);
+    }
+
+.link-options {
+    position: absolute;
+    top: .5em; right: .5em;
+}
+.link-date {
+    font-size: .8rem;
+    font-style: italic;
+    margin-bottom: .5em;
+}
+
+#addedCategories {
+    margin-bottom: 1em;
+}
+
+.category {
+    font-weight: bold;
+    padding: .25em .5em;
+    border: 1px solid var(--main-accent);
+    border-radius: .25em;
+    font-size: .7rem;
+    background: var(--main-accent);
+    color: var(--dark-accent);
+}
+
+@media only screen and (min-width: 768px) {
+    .flex-item {
+        flex-basis: 50%;
+    }
+}
+
+@media only screen and (min-width: 1280px) {
+    .flex-item {
+        flex-basis: 33.33%;
+    }
+}
+
+/* ================================ */
+/* Animations */
+/* ================================ */
+
+@keyframes slideDown {
+    0% {
+        transform: translateY(-1000px);
+    }
+    70% {
+        transform: translateY(25px);
+    }
+    80% {
+        transform: translateY(-15px);
+    }
+    100% {
+        transform: translateY(0);
+    }
+}

@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Link Saver</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    
+    <nav id="nav">
+        <div class="container" id="navContainer">
+            <h1 class="nav-header">Link Saver</h1>
+            <a href="#" id="addBtn">&plus;</a>
+        </div>
+    </nav>
+
+    <div class="container">
+
+        <div id="addLinkContainer" class="full-screen-opaque hidden">
+
+            <div class="panel" id="addLinkPanel">
+                <h3 class="header">Add Link</h3>
+                <form id="addLinkForm">
+                    <input type="text" name="title" id="linkTitle" class="form-control" placeholder="Title">
+                    <input type="text" name="url" id="linkUrl" class="form-control" placeholder="URL">
+                    <input type="text" name="category" id="linkCategory" class="form-control" placeholder="Categories (comma separated)">
+
+                    <div id="addedCategories">
+
+                    </div>
+
+                    <input type="submit" value="Submit" id="submitBtn">
+                    <input type="submit" value="Cancel" id="cancelBtn">
+                </form>
+            </div>
+
+        </div>
+
+        <div id="linksList">
+
+            <!-- <div class="link panel">
+                <div class="link-options">
+                    <button class="btn-sm">Delete</button>
+                    <button class="btn-sm">Edit</button>
+                </div>
+
+                <a href="#"><h2 class="header">Link Title</h2></a>
+                <p class="link-date">18/06/2019</p>
+                <div class="categories">
+                    Categories:
+                    <span class="category">Web Development</span>
+                    <span class="category">JavaScript</span>
+                </div>
+            </div> -->
+            
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
