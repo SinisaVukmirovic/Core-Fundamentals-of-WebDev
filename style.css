@@ -49,7 +49,11 @@ a {
     font-size: 1.5rem;
     margin-bottom: .5em;
     color: var(--light-accent);
+    display: inline-block;
 }
+    .header:hover {
+        color: var(--main-accent);
+    }
 
 .full-screen-opaque {
     position: absolute;
